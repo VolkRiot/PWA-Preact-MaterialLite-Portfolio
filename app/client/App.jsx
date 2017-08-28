@@ -1,9 +1,23 @@
 import { h, render } from 'preact';
+import { AppContainer } from 'react-hot-loader';
+import Home from './containers/Home';
+
+const root = document.getElementById('app');
+
+const wrapApp = AppContainer => (
+    <AppContainer>
+      <AppContainer/>
+    </AppContainer>
+);
 
 render(
-  <div id="foo">
-    <span>Hello, world!</span>
-    <button onClick={e => alert('hi!')}>Click Me</button>
-  </div>,
-  document.getElementById('app')
+  wrapApp(Home),
+    root
 );
+
+if (module.hot) {
+  module.hot.accept('./app', () => {
+    const NextApp = require('./containers/Home').default;
+    render(wrapApp(NextApp), root)
+  })
+}
