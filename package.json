@@ -16,7 +16,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "preact": "^8.2.4"
+    "preact": "^8.2.4",
+    "react-hot-loader": "next"
   },
   "scripts": {
     "start": "babel-node app/index.html",

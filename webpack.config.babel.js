@@ -4,7 +4,10 @@ import webpack from 'webpack';
 import { PORT, isProd } from './app/config';
 
 export default {
-  entry: ['./app/client/App.js'],
+  entry: [
+      'react-hot-loader/patch',
+    './app/client/App.js'
+  ],
   output: {
     filename: 'js/bundle.js',
     path: resolve(__dirname, 'dist'),
