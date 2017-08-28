@@ -16,7 +16,7 @@ render(
 );
 
 if (module.hot) {
-  module.hot.accept('./app', () => {
+  module.hot.accept('./containers/Home', () => {
     const NextApp = require('./containers/Home').default;
     render(wrapApp(NextApp), root)
   })
