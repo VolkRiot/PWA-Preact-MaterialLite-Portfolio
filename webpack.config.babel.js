@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 import webpack from 'webpack';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
-import * as ManifestPlugin from 'webpack-manifest-plugin'
+import ManifestPlugin from 'webpack-manifest-plugin'
 
 import { PORT, isProd } from './app/config';
 
