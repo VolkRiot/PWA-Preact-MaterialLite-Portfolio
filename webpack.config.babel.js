@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import webpack from 'webpack';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
+import * as ManifestPlugin from 'webpack-manifest-plugin'
 
 import { PORT, isProd } from './app/config';
 
@@ -21,6 +22,15 @@ export default {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
       },
     ],
   },
@@ -45,5 +55,6 @@ export default {
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new CaseSensitivePathsPlugin(),
+    new ManifestPlugin()
   ],
 };
