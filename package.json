@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "preact": "^8.2.4",
+    "preact-compat": "^3.17.0",
     "react-hot-loader": "next"
   },
   "scripts": {

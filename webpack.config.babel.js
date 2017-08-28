@@ -6,7 +6,7 @@ import { PORT, isProd } from './app/config';
 export default {
   entry: [
       'react-hot-loader/patch',
-    './app/client/App.js'
+    './app/client/App.jsx'
   ],
   output: {
     filename: 'js/bundle.js',
@@ -20,7 +20,11 @@ export default {
   },
   devtool: isProd ? false : 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      "react": resolve(__dirname, "ReactToPreact.config.js"),
+      "react-dom": "preact-compat"
+    }
   },
   devServer: {
     port: PORT,
