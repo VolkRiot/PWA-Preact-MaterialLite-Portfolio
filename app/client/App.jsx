@@ -1,6 +1,6 @@
 import { h, render } from 'preact';
 import { AppContainer } from 'react-hot-loader';
-import Home from './containers/Home';
+import Main from './Router';
 
 const root = document.getElementById('app');
 
@@ -11,13 +11,13 @@ const wrapApp = AppContainer => (
 );
 
 render(
-  wrapApp(Home),
+  wrapApp(Main),
     root
 );
 
 if (module.hot) {
-  module.hot.accept('./containers/Home', () => {
-    const NextApp = require('./containers/Home').default;
+  module.hot.accept('./Router', () => {
+    const NextApp = require('./Router').default;
     render(wrapApp(NextApp), root)
   })
 }
