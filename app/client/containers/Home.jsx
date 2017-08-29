@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return (
       <div id="foo">
-        <a href="/test">Testing</a>
+        <a href="/letter">Testing</a>
       </div>
     );
   }
