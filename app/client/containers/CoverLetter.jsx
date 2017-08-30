@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import * as style from './CoverLetter.style.css';
 
 class CoverLetter extends Component {
   constructor(props) {
@@ -6,8 +7,19 @@ class CoverLetter extends Component {
   }
 
   render() {
-    console.log('This is', this.context.router.route.match);
-    return <h1>This will be my cover letter thingy</h1>;
+    // console.log('This is', this.context.router.route.match.params);
+    return (
+      <div class="mdl-grid">
+        <div class="mdl-layout-spacer" />
+        <div
+          id="cover-letter-main"
+          class="mdl-cell mdl-cell--10-col mdl-cell--middle mdl-shadow--2dp"
+        >
+          Testing
+        </div>
+        <div class="mdl-layout-spacer" />
+      </div>
+    );
   }
 }
 
