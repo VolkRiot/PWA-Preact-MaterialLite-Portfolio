@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <Switch>
       <Route exact path="/" render={() => <Home />} />
-      <Route exact path="/letter" render={() => <CoverLetter />} />
+      <Route path="/letter/:company?" render={() => <CoverLetter />} />
     </Switch>
   );
 };
