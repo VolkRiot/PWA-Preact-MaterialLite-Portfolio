@@ -5,22 +5,27 @@ class CoverLetter extends Component {
   constructor(props) {
     super(props);
     this.params;
+    this.default = { company: 'Company Name' };
   }
 
   render() {
-    this.params = this.context.router.route.match.params;
+    console.log(this);
+    this.params = this.context.router.route.match.params.company
+      ? this.context.router.route.match.params
+      : this.default;
     return (
       <div class="mdl-grid">
         <div class="mdl-layout-spacer" />
         <div
           id="cover-letter-main"
-          class="mdl-cell mdl-cell--10-col mdl-cell--middle mdl-shadow--2dp"
+          class="mdl-cell mdl-cell--10-col mdl-cell--middle mdl-shadow--4dp"
         >
           <div class="c6">
             <p class="c3">
-              <span class="c0">29</span>
+              {/* <span class="c0">29</span> */}
               <span class="c0">
-                , August, 2017<br />
+                {new Date().toUTCString()}
+                <br />
                 <br />
               </span>
               <span class="c0 c8">{this.params.company}</span>
@@ -32,7 +37,9 @@ class CoverLetter extends Component {
                 <br />This letter is to express my interest in your posting for
                 a UI Engineer
               </span>
-              <span class="c0 c8">&nbsp;position with ShiftLeft</span>
+              <span class="c0 c8">
+                &nbsp;position with {this.params.company}
+              </span>
               <span class="c2 c0">
                 . With my hands-on experience efficiently coding websites and
                 applications using modern Full-Stack tools such as Javascript,
@@ -63,7 +70,9 @@ class CoverLetter extends Component {
               <span class="c4 c0">
                 <a
                   class="c1"
-                  href="https://www.google.com/url?q=https://github.com/VolkRiot&amp;sa=D&amp;ust=1504120041882000&amp;usg=AFQjCNFCS6x_wL5TMonta4iU4x75akYIFg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/VolkRiot"
                 >
                   https://github.com/VolkRiot
                 </a>
@@ -128,7 +137,9 @@ class CoverLetter extends Component {
               <span class="c4">
                 <a
                   class="c1"
-                  href="https://www.google.com/url?q=https://github.com/VolkRiot&amp;sa=D&amp;ust=1504120041883000&amp;usg=AFQjCNHoTieTFTNr370bIp7GffZXhbYbmw"
+                  href="https://github.com/VolkRiot"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://github.com/VolkRiot
                 </a>
