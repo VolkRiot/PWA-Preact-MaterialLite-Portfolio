@@ -6,10 +6,10 @@ class CoverLetter extends Component {
     super(props);
     this.params;
     this.default = { company: 'Company Name' };
+    this.date = new Date().toUTCString().split(' ');
   }
 
   render() {
-    console.log(this);
     this.params = this.context.router.route.match.params.company
       ? this.context.router.route.match.params
       : this.default;
@@ -24,7 +24,7 @@ class CoverLetter extends Component {
             <p class="c3">
               {/* <span class="c0">29</span> */}
               <span class="c0">
-                {new Date().toUTCString()}
+                {this.date.slice(0, this.date.length - 2).join(' ')}
                 <br />
                 <br />
               </span>
