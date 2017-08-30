@@ -13,6 +13,14 @@ class CoverLetter extends Component {
     this.params = this.context.router.route.match.params.company
       ? this.context.router.route.match.params
       : this.default;
+
+    // To UpperCase the entire params object
+    this.params = Object.keys(this.params).reduce((acc, each) => {
+      acc[each] =
+        this.params[each].charAt(0).toUpperCase() + this.params[each].slice(1);
+      return acc;
+    }, {});
+
     return (
       <div class="mdl-grid">
         <div class="mdl-layout-spacer" />
@@ -22,7 +30,6 @@ class CoverLetter extends Component {
         >
           <div class="c6">
             <p class="c3">
-              {/* <span class="c0">29</span> */}
               <span class="c0">
                 {this.date.slice(0, this.date.length - 2).join(' ')}
                 <br />

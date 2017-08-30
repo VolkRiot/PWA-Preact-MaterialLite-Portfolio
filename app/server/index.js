@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import { join } from 'path';
+import favicon from 'serve-favicon';
 import renderView from '../render';
 
 const app = express();
@@ -15,7 +16,9 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // Static Routes
-// app.use(express.static(join(__dirname, '../../dist')));
+app.use('/static', express.static('dist'));
+app.use('/static', express.static('public'));
+app.use(favicon('public/img/favicon.ico'));
 
 app.get('*', (req, res) => {
   res.send(renderView());
