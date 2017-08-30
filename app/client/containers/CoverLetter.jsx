@@ -23,9 +23,7 @@ class CoverLetter extends Component {
                 , August, 2017<br />
                 <br />
               </span>
-              <span class="c0 c8">
-                {this.params.company}
-              </span>
+              <span class="c0 c8">{this.params.company}</span>
               <span class="c0 c8">
                 <br />
               </span>
@@ -41,6 +39,7 @@ class CoverLetter extends Component {
                 Node, HTML/CSS, Python, React, Express and more. I am confident
                 I will be an excellent addition to your organization.<br />
               </span>
+              <br />
             </p>
             <p class="c3">
               <span class="c0">
