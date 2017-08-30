@@ -15,7 +15,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // Static Routes
-app.use(express.static(join(__dirname, '../../dist')));
+// app.use(express.static(join(__dirname, '../../dist')));
 
 app.get('*', (req, res) => {
   res.send(renderView());
