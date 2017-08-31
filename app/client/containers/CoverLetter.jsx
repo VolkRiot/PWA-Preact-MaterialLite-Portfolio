@@ -16,8 +16,13 @@ class CoverLetter extends Component {
 
     // To UpperCase the entire params object
     this.params = Object.keys(this.params).reduce((acc, each) => {
-      acc[each] =
-        this.params[each].charAt(0).toUpperCase() + this.params[each].slice(1);
+      acc[each] = this.params[each]
+        .split('+')
+        .map(each => {
+          return each.charAt(0).toUpperCase() + each.slice(1);
+        })
+        .join(' ');
+
       return acc;
     }, {});
 
@@ -42,7 +47,7 @@ class CoverLetter extends Component {
               <span class="c0">
                 <br />Dear Hiring Manager,<br />
                 <br />This letter is to express my interest in your posting for
-                a UI Engineer
+                a {this.params.title}
               </span>
               <span class="c0 c8">
                 &nbsp;position with {this.params.company}
