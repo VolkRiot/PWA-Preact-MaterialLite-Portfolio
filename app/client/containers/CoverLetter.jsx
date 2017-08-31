@@ -31,7 +31,7 @@ class CoverLetter extends Component {
         <div class="mdl-layout-spacer" />
         <div
           id="cover-letter-main"
-          class="mdl-cell mdl-cell--10-col mdl-cell--middle mdl-shadow--4dp"
+          class="mdl-cell mdl-cell--8-col mdl-cell--middle mdl-shadow--4dp"
         >
           <div class="c6">
             <p class="c3">
