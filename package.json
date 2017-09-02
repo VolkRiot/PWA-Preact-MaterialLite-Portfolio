@@ -39,9 +39,9 @@
   "scripts": {
     "start": "node dist/server/",
     "local:build":
-      "rimraf dist/ && babel app/ -d dist && webpack -p --progress",
+      "rm -rf dist/ && babel app/ -d dist && webpack -p --progress",
     "prod:build":
-      "rimraf dist/ && babel app/ -d dist && cross-env NODE_ENV=production webpack -p --progress",
+      "rm -rf dist/ && babel app/ -d dist && cross-env NODE_ENV=production webpack -p --progress",
     "dev:start": "nodemon -e js,jsx --ignore dist --exec babel-node app/server",
     "prod:start":
       "cross-env NODE_ENV=production pm2 start dist/server && pm2 logs",

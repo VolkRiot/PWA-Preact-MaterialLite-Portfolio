@@ -1,13 +1,22 @@
-FROM mmetrikin/node-vim-nginx
+FROM node:8.4.0
+
+# The base node image sets a very verbose log level.
+ENV NPM_CONFIG_LOGLEVEL warn
 
 # Remove the default nginx index.html
 RUN rm -rf /var/www/html/index.nginx-debian.html
 
+COPY package.json package.json
+RUN npm install
+
 # Copy the contents of the dist directory over to the nginx web root
-COPY /dist/* /var/www/html/
+COPY . .
 
-# Expose the public http port
-EXPOSE 80
+# The base node image sets a very verbose log level.
+ENV NPM_CONFIG_LOGLEVEL warn
 
-# Start server
-CMD ["nginx", "-g", "daemon off;"]
+RUN npm run prod:build
+
+CMD node dist/server
+
+EXPOSE 8080
