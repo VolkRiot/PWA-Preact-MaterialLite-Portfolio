@@ -17,6 +17,6 @@ ENV NPM_CONFIG_LOGLEVEL warn
 
 RUN npm run prod:build
 
-CMD node dist/server
+CMD npm run prod:start
 
 EXPOSE 8080
