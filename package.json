@@ -2,8 +2,7 @@
   "name": "PWA-Preact-MaterialLite-Portfolio",
   "version": "1.0.0",
   "main": "index.js",
-  "repository":
-    "https://github.com/VolkRiot/PWA-Preact-MaterialLite-Portfolio.git",
+  "repository": "https://github.com/VolkRiot/PWA-Preact-MaterialLite-Portfolio.git",
   "author": "Mikhail Metrikin <metrikin@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -18,7 +17,6 @@
     "file-loader": "^0.11.2",
     "nodemon": "^1.11.0",
     "pm2": "^2.6.1",
-    "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1",
@@ -38,13 +36,10 @@
   },
   "scripts": {
     "start": "node dist/server/",
-    "local:build":
-      "rm -rf dist/ && babel app/ -d dist && webpack -p --progress",
-    "prod:build":
-      "rm -rf dist/ && babel app/ -d dist && cross-env NODE_ENV=production webpack -p --progress",
+    "local:build": "rm -rf dist/ && babel app/ -d dist && webpack -p --progress",
+    "prod:build": "rm -rf dist/ && babel app/ -d dist && cross-env NODE_ENV=production webpack -p --progress",
     "dev:start": "nodemon -e js,jsx --ignore dist --exec babel-node app/server",
-    "prod:start":
-      "cross-env NODE_ENV=production pm2 start dist/server && pm2 logs",
+    "prod:start": "cross-env NODE_ENV=production pm2 start dist/server && pm2 logs",
     "prod:stop": "pm2 delete server",
     "dev:wds": "webpack-dev-server --progress"
   }
