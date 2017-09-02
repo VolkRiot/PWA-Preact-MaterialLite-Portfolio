@@ -13,6 +13,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.5",
     "file-loader": "^0.11.2",
     "nodemon": "^1.11.0",
@@ -36,14 +37,15 @@
     "serve-favicon": "^2.4.3"
   },
   "scripts": {
-    "start": "babel dist/server/",
+    "start": "node dist/server/",
     "local:build":
-      "rimraf lib dist/ && babel app/ -d dist && webpack -p --progress",
+      "rimraf dist/ && babel app/ -d dist && webpack -p --progress",
     "prod:build":
       "rimraf dist/ && babel app/ -d dist && cross-env NODE_ENV=production webpack -p --progress",
     "dev:start": "nodemon -e js,jsx --ignore dist --exec babel-node app/server",
     "prod:start":
-      "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
+      "cross-env NODE_ENV=production pm2 start dist/server && pm2 logs",
+    "prod:stop": "pm2 delete server",
     "dev:wds": "webpack-dev-server --progress"
   }
 }

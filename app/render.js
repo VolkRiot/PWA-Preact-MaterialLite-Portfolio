@@ -15,7 +15,7 @@ const renderView = () => `
 <body>
   <div id="app"></div>
   <script src="${isProd
-    ? ''
+    ? '/static/'
     : 'http://localhost:8000/dist/'}js/bundle.js"></script>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </body>
