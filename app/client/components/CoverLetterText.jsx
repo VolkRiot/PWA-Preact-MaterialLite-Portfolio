@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import * as style from './CoverLetter.style.css';
 
 export default function CoverLetterBody({ date, params }) {
   return (

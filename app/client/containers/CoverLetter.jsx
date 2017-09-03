@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import * as style from './CoverLetter.style.css';
-import CoverLetterBody from '../components/CoverLetterText';
 
 class CoverLetter extends Component {
   constructor(props) {
