@@ -27,32 +27,32 @@ class CoverLetter extends Component {
     }, {});
 
     return (
-      <div class="mdl-grid">
-        <div class="mdl-layout-spacer" />
+      <div className="mdl-grid">
+        <div className="mdl-layout-spacer" />
         <div
           id="cover-letter-main"
-          class="mdl-cell mdl-cell--8-col mdl-cell--middle mdl-shadow--4dp"
+          className="mdl-cell mdl-cell--8-col mdl-cell--middle mdl-shadow--4dp"
         >
-          <div class="c6">
-            <p class="c3">
-              <span class="c0">
+          <div className="c6">
+            <p className="c3">
+              <span className="c0">
                 {this.date.slice(0, this.date.length - 2).join(' ')}
                 <br />
                 <br />
               </span>
-              <span class="c0 c8">{this.params.company}</span>
-              <span class="c0 c8">
+              <span className="c0 c8">{this.params.company}</span>
+              <span className="c0 c8">
                 <br />
               </span>
-              <span class="c0">
+              <span className="c0">
                 <br />Dear Hiring Manager,<br />
                 <br />This letter is to express my interest in your posting for
                 a {this.params.title}
               </span>
-              <span class="c0 c8">
+              <span className="c0 c8">
                 &nbsp;position with {this.params.company}
               </span>
-              <span class="c2 c0">
+              <span className="c2 c0">
                 . With my hands-on experience efficiently coding websites and
                 applications using modern Full-Stack tools such as Javascript,
                 Node, HTML/CSS, Python, React, Express and more. I am confident
@@ -60,8 +60,8 @@ class CoverLetter extends Component {
               </span>
               <br />
             </p>
-            <p class="c3">
-              <span class="c0">
+            <p className="c3">
+              <span className="c0">
                 I am originally a self-taught programmer who started my coding
                 career by cutting my teeth on C++ before moving on to working as
                 an apprentice writing a Python Selenium Webdriver testing
@@ -70,18 +70,18 @@ class CoverLetter extends Component {
                 Javascript/React Stack in order to develop the skill-set needed
                 for modern web applications infrastructures. I{' '}
               </span>
-              <span class="c0">recently</span>
-              <span class="c0">&nbsp;</span>
-              <span class="c0">completed</span>
-              <span class="c0">
+              <span className="c0">recently</span>
+              <span className="c0">&nbsp;</span>
+              <span className="c0">completed</span>
+              <span className="c0">
                 &nbsp;a half-year training program from UC Berkeley focused on
                 full stack web-development across the React Stack. You can check
                 out my Javascript web development tools and numerous projects on
                 my GitHub:{' '}
               </span>
-              <span class="c4 c0">
+              <span className="c4 c0">
                 <a
-                  class="c1"
+                  className="c1"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/VolkRiot"
@@ -89,7 +89,7 @@ class CoverLetter extends Component {
                   https://github.com/VolkRiot
                 </a>
               </span>
-              <span class="c0">
+              <span className="c0">
                 .<br />
                 <br />From a more technical perspective, my previous software
                 engineering job involved a code base written primarily in Java,
@@ -104,11 +104,11 @@ class CoverLetter extends Component {
                 standard.{' '}
               </span>
             </p>
-            <p class="c3 c7">
-              <span class="c2 c0" />
+            <p className="c3 c7">
+              <span className="c2 c0" />
             </p>
-            <p class="c3">
-              <span class="c0 c2">
+            <p className="c3">
+              <span className="c0 c2">
                 As per my work in the Javascript React stack. I have build a
                 number of MVC full-stack apps which you can review on my GitHub.
                 I have been the primary most of the major development efforts,
@@ -116,11 +116,11 @@ class CoverLetter extends Component {
                 builds with limited time.{' '}
               </span>
             </p>
-            <p class="c3 c7">
-              <span class="c2 c0" />
+            <p className="c3 c7">
+              <span className="c2 c0" />
             </p>
-            <p class="c3">
-              <span class="c0">
+            <p className="c3">
+              <span className="c0">
                 One of my major interests is specifically in how the individual
                 design and system choices affect the overall performance for the
                 front-end. I firmly believe that a beautiful and performative
@@ -130,25 +130,25 @@ class CoverLetter extends Component {
                 dynamic web that users have come to expect.
               </span>
             </p>
-            <p class="c3">
-              <span class="c0">
+            <p className="c3">
+              <span className="c0">
                 <br />Please let me know if I can answer any further questions
                 regarding my knowledge of relevant systems.<br />
                 <br />Thank you for your time and consideration. I look forward
                 to speaking with you further.<br />
               </span>
-              <span class="c2 c5">
+              <span className="c2 c5">
                 <br />
                 <br />Best Regards,<br />Mikhail Metrikin
               </span>
             </p>
-            <p class="c3">
+            <p className="c3">
               <span>
                 (510) 925-5353<br />
               </span>
-              <span class="c4">
+              <span className="c4">
                 <a
-                  class="c1"
+                  className="c1"
                   href="https://github.com/VolkRiot"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -159,7 +159,7 @@ class CoverLetter extends Component {
             </p>
           </div>
         </div>
-        <div class="mdl-layout-spacer" />
+        <div className="mdl-layout-spacer" />
       </div>
     );
   }
