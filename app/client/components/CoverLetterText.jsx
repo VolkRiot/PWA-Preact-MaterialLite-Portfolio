@@ -31,7 +31,7 @@ export default function CoverLetterBody({ date, params }) {
         <p className="c3">
           <span className="c0">
             I am originally a self-taught programmer who started my coding
-            career by cutting my teeth on C++ before moving on to working as an
+            career by teaching myself C++ before moving on to working as an
             apprentice writing a Python Selenium Webdriver testing framework,
             along with Javascript and Java, for a startup in SF. Afterwards, I
             moved my focus to a Full-Stack Javascript/React Stack in order to
