@@ -55,6 +55,9 @@ class NavBar extends Component {
             </a>
           </nav>
         </div>
+        <main class="mdl-layout__content">
+          <div class="page-content" />
+        </main>
       </div>
     );
   }
