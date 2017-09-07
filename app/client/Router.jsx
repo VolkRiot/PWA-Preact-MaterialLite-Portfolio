@@ -4,7 +4,7 @@ import { h } from 'preact';
 import Home from './containers/Home.jsx';
 import CoverLetter from './containers/CoverLetter';
 
-const Main = () => {
+const Main = props => {
   return (
     <Switch>
       <Route exact path="/" render={() => <Home />} />

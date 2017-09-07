@@ -5,12 +5,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = document.getElementById('app');
 
-const wrapApp = AppContainer =>
+const wrapApp = AppContainer => (
   <BrowserRouter>
     <AppContainer>
       <AppContainer />
     </AppContainer>
-  </BrowserRouter>;
+  </BrowserRouter>
+);
 
 render(wrapApp(Main), root);
 
