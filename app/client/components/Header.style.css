@@ -2,6 +2,42 @@
   display: block;
 }
 
+.mdl-navigation__link {
+  color: rgb(230, 230, 230) !important;
+}
+
+.mdl-navigation__link:hover {
+  color: white !important;
+}
+
+.portfolio-logo-row {
+  min-height: 200px;
+}
+
+.title-block {
+  justify-content: left !important;
+  padding: 1em !important;
+  margin: 2em 0 0 2em !important;
+}
+
+#title-text-block-inner {
+  text-decoration: none !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-size: 1rem;
+}
+
+/*.portfolio-logo-row {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}*/
+
+/*.top-header {
+  padding: 10px;
+}*/
+
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;

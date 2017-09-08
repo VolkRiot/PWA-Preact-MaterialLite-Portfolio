@@ -45,6 +45,16 @@ class NavBar extends Component {
           id="top-header"
           class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header portfolio-header"
         >
+          <div class="title-block title-row mdl-layout__header-row">
+            <span
+              id="title-text-block-inner"
+              class="docs-layout-title mdl-layout-title"
+            >
+              <a href="/">
+                Misha<br />Is<br />Me
+              </a>
+            </span>
+          </div>
           <div class="mdl-layout__header-row portfolio-logo-row">
             <span class="mdl-layout__title">
               <span class="mdl-layout__title">Something should go here</span>
