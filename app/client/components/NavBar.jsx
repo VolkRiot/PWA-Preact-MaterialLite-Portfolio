@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { Link } from 'react-router-dom';
 import * as style from './Header.style.css';
 import * as style2 from './foreignCSS.style.css';
 
@@ -20,7 +21,7 @@ class NavBar extends Component {
     return Object.keys(this.navLinks).map((each, i) => {
       const currentPage = this.navLinks[each];
       return (
-        <a
+        <Link
           class={
             this.currentLocPath === currentPage.href ? (
               'mdl-navigation__link is-active'
@@ -29,10 +30,10 @@ class NavBar extends Component {
             )
           }
           key={i}
-          href={currentPage.href}
+          to={currentPage.href}
         >
           {each.charAt(0).toUpperCase() + String(each).slice(1)}
-        </a>
+        </Link>
       );
     });
   }
@@ -50,9 +51,9 @@ class NavBar extends Component {
               id="title-text-block-inner"
               class="docs-layout-title mdl-layout-title"
             >
-              <a href="/">
+              <Link id="title-text-block-link" to="/">
                 Misha<br />Is<br />Me
-              </a>
+              </Link>
             </span>
           </div>
           <div class="mdl-layout__header-row portfolio-logo-row">
@@ -71,9 +72,9 @@ class NavBar extends Component {
             {this.generateLinks()}
           </nav>
         </div>
-        <main class="mdl-layout__content">
+        {/* <main class="mdl-layout__content">
           <div class="page-content" />
-        </main>
+        </main> */}
       </div>
     );
   }
