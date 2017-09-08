@@ -1,0 +1,13 @@
+.background-plate {
+  z-index: -1;
+  height: 400px;
+  background-color: rgb(96, 125, 139);
+}
+
+.cover-letter-main {
+  z-index: 2;
+}
+
+.mdl-grid.cover-letter-main {
+  margin-top: -25%;
+}

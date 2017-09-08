@@ -1,0 +1,8 @@
+.about-container {
+  justify-content: center;
+  max-width: 900px;
+}
+
+.mdl-cell.mdl-cell--12-col.mdl-card.mdl-shadow--4dp {
+  max-width: 900px;
+}

@@ -23,7 +23,7 @@ class Layout extends Component {
       const currentPage = this.navLinks[each];
       return (
         <Link
-          class={
+          className={
             this.currentLocPath === currentPage.href ? (
               'mdl-navigation__link is-active'
             ) : (
@@ -42,38 +42,40 @@ class Layout extends Component {
   render() {
     this.currentLocPath = this.context.router.route.location.pathname;
     return (
-      <div class="outer-header-wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div className="outer-header-wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header
           id="top-header"
-          class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header portfolio-header"
+          className="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header portfolio-header"
         >
-          <div class="title-block title-row mdl-layout__header-row">
+          <div className="title-block title-row mdl-layout__header-row">
             <span
               id="title-text-block-inner"
-              class="docs-layout-title mdl-layout-title"
+              className="docs-layout-title mdl-layout-title"
             >
               <Link id="title-text-block-link" to="/">
                 Misha<br />Is<br />Me
               </Link>
             </span>
           </div>
-          <div class="mdl-layout__header-row portfolio-logo-row">
-            <span class="mdl-layout__title">
-              <span class="mdl-layout__title">Something should go here</span>
+          <div className="mdl-layout__header-row portfolio-logo-row">
+            <span className="mdl-layout__title">
+              <span className="mdl-layout__title">
+                Something should go here
+              </span>
             </span>
           </div>
-          <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+          <div className="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+            <nav className="mdl-navigation mdl-typography--body-1-force-preferred-font">
               {this.generateLinks()}
             </nav>
           </div>
         </header>
-        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-          <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+        <div className="mdl-layout__drawer mdl-layout--small-screen-only">
+          <nav className="mdl-navigation mdl-typography--body-1-force-preferred-font">
             {this.generateLinks()}
           </nav>
         </div>
-        <main class="mdl-layout__content">{this.props.children}</main>
+        <main className="mdl-layout__content">{this.props.children}</main>
       </div>
     );
   }

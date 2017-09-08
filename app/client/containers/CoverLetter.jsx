@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import CoverLetterBody from '../components/CoverLetterText';
+import * as style from './CoverLetter.style.css';
 
 class CoverLetter extends Component {
   constructor(props) {
@@ -27,10 +28,13 @@ class CoverLetter extends Component {
     }, {});
 
     return (
-      <div className="mdl-grid">
-        <div className="mdl-layout-spacer" />
-        <CoverLetterBody date={this.date} params={this.params} />
-        <div className="mdl-layout-spacer" />
+      <div class="cover-letter-body-wrapper">
+        <div class="background-plate" />
+        <div className="mdl-grid cover-letter-main">
+          <div className="mdl-layout-spacer" />
+          <CoverLetterBody date={this.date} params={this.params} />
+          <div className="mdl-layout-spacer" />
+        </div>
       </div>
     );
   }
