@@ -2,8 +2,9 @@ import { h, Component } from 'preact';
 import { Link } from 'react-router-dom';
 import * as style from './Header.style.css';
 import * as style2 from './foreignCSS.style.css';
+import About from '../containers/About';
 
-class NavBar extends Component {
+class Layout extends Component {
   constructor(props) {
     super(props);
 
@@ -41,7 +42,7 @@ class NavBar extends Component {
   render() {
     this.currentLocPath = this.context.router.route.location.pathname;
     return (
-      <div class="outer-header-wrapper">
+      <div class="outer-header-wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header
           id="top-header"
           class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header portfolio-header"
@@ -72,12 +73,10 @@ class NavBar extends Component {
             {this.generateLinks()}
           </nav>
         </div>
-        {/* <main class="mdl-layout__content">
-          <div class="page-content" />
-        </main> */}
+        <main class="mdl-layout__content">{this.props.children}</main>
       </div>
     );
   }
 }
 
-export default NavBar;
+export default Layout;

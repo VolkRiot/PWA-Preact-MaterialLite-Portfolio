@@ -1,6 +1,6 @@
 import { h, render } from 'preact';
 import { AppContainer } from 'react-hot-loader';
-import Main from './Router';
+import Router from './Router';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = document.getElementById('app');
@@ -13,7 +13,7 @@ const wrapApp = AppContainer => (
   </BrowserRouter>
 );
 
-render(wrapApp(Main), root);
+render(wrapApp(Router), root);
 
 if (module.hot) {
   module.hot.accept('./Router', () => {
