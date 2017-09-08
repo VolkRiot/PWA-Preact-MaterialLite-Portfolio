@@ -41,7 +41,7 @@ class NavBar extends Component {
   render() {
     this.currentLocPath = this.context.router.route.location.pathname;
     return (
-      <div class="mdl-layout mdl-js-layout">
+      <div class="outer-header-wrapper">
         <header
           id="top-header"
           class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header portfolio-header"

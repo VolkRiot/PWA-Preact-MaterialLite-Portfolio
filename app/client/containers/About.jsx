@@ -8,7 +8,7 @@ class About extends Component {
 
   render() {
     return (
-      <div id="about-page">
+      <div class="mdl-layout mdl-js-layout">
         <NavBar />
         <main class="mdl-layout__content">
           <div class="page-content" />
